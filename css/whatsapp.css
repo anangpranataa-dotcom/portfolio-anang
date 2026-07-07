@@ -1,0 +1,45 @@
+/* WhatsApp floating button styles */
+#whatsapp-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.22);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  text-decoration: none;
+}
+
+#whatsapp-button .fa {
+  font-size: 24px;
+  line-height: 1;
+}
+
+#whatsapp-button:focus,
+#whatsapp-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.36);
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  #whatsapp-button {
+    right: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
+  }
+  #whatsapp-button .fa { font-size: 22px; }
+}
+
+/* Slightly larger hit area on touch devices */
+@media (pointer: coarse) {
+  #whatsapp-button { padding: 6px; }
+}
